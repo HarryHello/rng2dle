@@ -326,3 +326,7 @@ const score = coefficient * rule.baseScore
 - 使用一个唯一数据源，不同时手工维护 JSON 和数据库；
 - 匹配、计分和界面展示分层；
 - 为未来的 JSON 或数据库适配保留清晰边界，但不提前实现暂时用不到的基础设施。
+
+## 规则实现索引
+
+当前所有规则的具体算法、模板和参数见 [全部规则实现说明](rule-implementations.md)。存在歧义时采用的实现约定见 [规则算法实现约定](pending-rules.md)。
