@@ -1,0 +1,47 @@
+[
+  {
+    "id": "rule-001",
+    "label": "binaless",
+    "name": {
+      "zh": "缺一少十",
+      "en": "Binaless"
+    },
+    "description": {
+      "zh": "棋盘不包含0和1",
+      "en": "The Grid does not contain the digits 0 and 1."
+    },
+    "baseScore": 100,
+    "matcherKey": "digit-constraints",
+    "params": {
+      "forbiddenDigits": [
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "rule-002",
+    "label": "cage",
+    "name": {
+      "zh": "附魔金苹果",
+      "en": "Mojang"
+    },
+    "description": {
+      "zh": "某个3x3区域符合金苹果的合成表",
+      "en": "A 3×3 area matches the minecraft:golden_apple crafting recipe."
+    },
+    "baseScore": 200,
+    "matcherKey": "pattern-matcher",
+    "params": {
+      "pattern": [
+        "###",
+        "#*#",
+        "###"
+      ],
+      "coefficient": {
+        "type": "constant",
+        "value": 1
+      }
+    }
+  }
+]
