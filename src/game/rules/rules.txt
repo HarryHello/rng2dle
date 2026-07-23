@@ -1,200 +1,73 @@
-id	label	name.cn	name.en	description.cn	description.en	baseScore	matcherKey	params											
-rule-0001	binaless	缺一少十	Binaless	棋盘不包含0和1	The Grid does not contain the digits 0 and 1.	100	digit-constraints	"{""forbiddenDigits"":[0,1]}"											
-rule-0002	collection	收藏馆	The Collection	棋盘中包含0-9所有数字		100	digit-constraints	"{""requiredDigits"":[0,1,2,3,4,5,6,7,8,9]}"											
-rule-0016	corner-vs-core	角心相映	Corner VS Core	四个角的数字与中心四个块的数字对应相同		100	pattern-matcher	"{""pattern"":[""a    b"",""      "",""  ab  "",""  cd  "",""      "",""c    d""],""allowSameWith"":{""a"":[""b"",""c"",""d""],""b"":[""c"",""d""],""c"":[""d""]},""coefficient"":{""type"":""constant"",""value"":1}}"											
-rule-0017	six-seven	刘夫妻	Only 67	棋盘只包含6和7		100	digit-constraints	"{""requiredDigits"":[6,7],""forbiddenDigits"":[0,1,2,3,4,5,8,9]}"											
-rule-0026	perfect-square	完全平方	Perfect Square	棋盘切成四个矩形后，每个矩形内仅包含一种数字		100	pattern-matcher	"{""pattern"":[""aaabbb"",""aaabbb"",""aaabbb"",""cccddd"",""cccddd"",""cccddd""],""allowSameWith"":{""a"":[""b"",""c"",""d""],""b"":[""c"",""d""],""c"":[""d""]},""coefficient"":{""type"":""constant"",""value"":1}}"											
-rule-0034	not-1-but-2	一不做二不休	Not 1 But 2	包含2但不包含1		100	digit-constraints	"{""requiredDigits"":[2],""forbiddenDigits"":[1]}"											
-rule-0038	binary	二进制	Binary	棋盘上只有0和1		100	digit-constraints	"{""requiredDigits"":[0,1],""forbiddenDigits"":[2,3,4,5,6,7,8,9]}"											
-rule-0040	cake	蛋糕	The Cake	含有一个3x3区域，其数字分配完全符合蛋糕合成表的pattern		100	pattern-matcher	"{""pattern"":[""mmm"",""ses"",""www""],""multiple"":true,""allowOverlap"":false,""coefficient"":{""type"":""match-count""}}"											
-rule-0047	crosshair	有框不打？	Crosshair	某格的上下左右四格相等		100	pattern-matcher	"{""pattern"":["" & "",""&#&"","" & ""],""multiple"":true,""coefficient"":{""type"":""match-count""}}"											
-rule-0049	mojang	附魔金苹果	Mojang	某个3x3区域符合金苹果的合成表	A 3×3 area matches the minecraft:golden_apple crafting recipe.	200	pattern-matcher	"{""pattern"":[""###"",""#*#"",""###""],""coefficient"":{""type"":""constant"",""value"":1}}"											
-rule-0051	end-protal	末地传送门	End Portal	有区域满足末地传送门的格式		100	pattern-matcher	"{""pattern"":["" FFF "",""FPPPF"",""FPPPF"",""FPPPF"","" FFF ""],""coefficient"":{""type"":""match-count""}}"											
-rule-0053	creeper	苦力怕	Creeper?	矩阵中苦力怕脸范围内的所有数字≥7，范围外的所有数字≤2		100	pattern-matcher	"{""pattern"":[""##..##"",""##..##"",""..##.."","".####."","".####."","".#..#.""],""symbolValues"":{""#"":[7,8,9],""."":[0,1,2]},""coefficient"":{""type"":""match-count""}}"											
-rule-0054	awmc	啊舞萌吃	Maimai DX	紧贴四角的八个格子对应舞萌的1-8号键		100	pattern-matcher	"{""pattern"":["" 8  1 "",""7    2"",""      "",""      "",""6    3"","" 5  4 ""],""coefficient"":{""type"":""match-count""}}"											
-rule-0059	one-two-much	说一不二	"One, But Two Much"	棋盘中包含1而不包含2		100	digit-constraints	"{""requiredDigits"":[1],""forbiddenDigits"":[2]}"											
-rule-0061	alcohol	乙醇	Alcohol	将每一格视为元素序号，以任意方向含有乙醇的结构式		100	pattern-matcher	"{""pattern"":["" 11  "",""16681"","" 11  ""],""multiple"":true,""coefficient"":{""type"":""match-count""}}"											
-rule-0070	flower	小花	Flower	网格中包含一个3宽3高占地5格的同样数字的十字架形状		100	pattern-matcher	"{""pattern"":["" # "",""###"","" # ""],""coefficient"":{""type"":""constant"",""value"":1}}"											
-rule-0071	next-round	套圈	Next Round	棋盘中从外到内分成3个圈		100	pattern-matcher	"{""pattern"":[""aaaaaa"",""abbbba"",""abccba"",""abccba"",""abbbba"",""aaaaaa""],""coefficient"":{""type"":""match-count""}}"											
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
-																			
+id	label	name.cn	name.en	description.cn	description.en	baseScore	matcherKey	params
+rule-0001	binaless	缺一少十	Binaless	棋盘中没有0和1。	The grid contains neither 0 nor 1.	100	digit-constraints	"{""forbiddenDigits"":[0,1]}"
+rule-0002	collection	收藏馆	The Collection	棋盘中包含0–9所有数字。	The grid contains every digit from 0 to 9.	100	digit-constraints	"{""requiredDigits"":[0,1,2,3,4,5,6,7,8,9]}"
+rule-0003	null-space	零空间	Null Space	棋盘对应矩阵的行列式为0。	The determinant of the grid matrix is zero.	100	determinant-zero	{}
+rule-0004	snake	贪吃蛇	Snake	存在从0开始、每次上下左右移动一格并依次经过1至9的路径。	A path starts at 0 and visits 1 through 9 in order using orthogonal moves.	100	sequential-path	{}
+rule-0005	step-by-step	拾级而上	Step by Step	从左下到右上和从右下到左上的两条对角线分别严格递增。	Both bottom-to-top diagonals are strictly increasing.	100	diagonal-increasing	{}
+rule-0006	mode-of-sum	和众数	Mode of Sum	36个数字之和恰好为162。	The sum of all 36 digits is exactly 162.	100	sum-compare	"{""operator"":""eq"",""value"":162}"
+rule-0007	triangle	三角形	Triangle	主对角线或副对角线不含0，且该对角线分隔的一侧全为0。	A main or anti-diagonal contains no zero and one side of it is entirely zero.	100	diagonal-triangle	{}
+rule-0008	fourfold-symmetry	四方同契	Fourfold Symmetry	棋盘绕中心旋转90°后与原棋盘相同。	The grid is unchanged by a 90-degree rotation.	100	board-symmetry	"{""transforms"":[""rotate-90""]}"
+rule-0009	central-symmetry	中心对称	Central Symmetry	棋盘绕中心旋转180°后与原棋盘相同。	The grid is unchanged by a 180-degree rotation.	100	board-symmetry	"{""transforms"":[""rotate-180""]}"
+rule-0010	perfect-balance	完美平衡	Perfect Balance	棋盘关于所有对称轴及中心对称。	The grid has every reflectional and rotational symmetry of a square.	100	board-symmetry	"{""transforms"":[""rotate-90"",""rotate-180"",""reflect-horizontal"",""reflect-vertical"",""reflect-main-diagonal"",""reflect-anti-diagonal""]}"
+rule-0011	huddle-together	抱团取暖		所有2×2小方块的数字之和均为偶数。	Every 2x2 subgrid has an even sum.	100	all-2x2-parity	"{""parity"":""even""}"
+rule-0012	cross-match	叉影相合	Cross Match	主对角线与副对角线在同一行的数字相等。	The main and anti-diagonal entries in every row are equal.	100	diagonal-correspondence	{}
+rule-0013	sudoku	数独	Sudoku	符合标准6×6数独规则，仅包含1–6。	The grid is a valid 6x6 Sudoku using digits 1 through 6.	100	sudoku-6x6	{}
+rule-0014	lego-bricks	乐高积木		所有行的和为偶数，所有列的和为奇数。	Every row sum is even and every column sum is odd.	100	line-sum-parity	"{""rowParity"":""even"",""columnParity"":""odd""}"
+rule-0015	palindromic	回文文回	PalindromicimordnilaP	棋盘同时关于水平轴和垂直轴对称。	The grid is symmetric across both the horizontal and vertical axes.	100	board-symmetry	"{""transforms"":[""reflect-horizontal"",""reflect-vertical""]}"
+rule-0016	corner-vs-core	角心相映	Corner vs Core	四个角的数字与中心四格的数字对应相同。	The four corner digits correspond to the four central digits.	100	pattern-matcher	"{""pattern"":[""a    b"",""      "",""  ab  "",""  cd  "",""      "",""c    d""],""allowSameWith"":{""a"":[""b"",""c"",""d""],""b"":[""c"",""d""],""c"":[""d""]},""coefficient"":{""type"":""constant"",""value"":1}}"
+rule-0017	six-seven	刘夫妻	Only 67	棋盘只包含6和7，且两者都出现。	The grid contains only 6 and 7, and both occur.	100	digit-constraints	"{""requiredDigits"":[6,7],""forbiddenDigits"":[0,1,2,3,4,5,8,9]}"
+rule-0018	mirrored	镜像	Mirrored	棋盘关于水平轴或垂直轴对称。	The grid is symmetric across the horizontal or vertical axis.	100	board-symmetry	"{""transforms"":[""reflect-horizontal"",""reflect-vertical""],""mode"":""any""}"
+rule-0019	sudoku-cheat	数独作弊	Cheat on Sudoku	每行、每列及主副对角线上的数字均不重复。	Every row, column, and main diagonal contains no repeated digit.	100	line-unique	{}
+rule-0020	checkerboard-parity	黑白交错		行列下标之和为奇数的格子是奇数，为偶数的格子是偶数。	A cell is odd when its row-plus-column index is odd, and even otherwise.	100	checkerboard-parity	{}
+rule-0021	quadrant-balance	四和院	Quadrant Balance	四个3×3象限的数字和相等。	The sums of the four 3x3 quadrants are equal.	100	equal-quadrant-sums	{}
+rule-0022	missing	遗失	Missing	0–9中有且仅有一个数字没有出现。	Exactly one digit from 0 through 9 is absent.	100	missing-digit-count	"{""count"":1}"
+rule-0023	strong-center	内强外弱		中心4×4的数字和大于外围20格的数字和。	The inner 4x4 sum is greater than the outer border sum.	100	center-border-sum	"{""operator"":""gt""}"
+rule-0024	ocean-ball	海洋球	Ocean Ball	包含一个所有数字相同的3×3区域。	The grid contains a uniform 3x3 area.	100	uniform-block	"{""width"":3,""height"":3}"
+rule-0025	bubble	肥皂泡	Bubble	包含一个所有数字相同的2×2区域。	The grid contains a uniform 2x2 area.	100	uniform-block	"{""width"":2,""height"":2}"
+rule-0026	perfect-square	完全平方	Perfect Square	棋盘分成四个3×3区域，每个区域内仅含一种数字。	Each of the four 3x3 quadrants contains only one digit.	100	pattern-matcher	"{""pattern"":[""aaabbb"",""aaabbb"",""aaabbb"",""cccddd"",""cccddd"",""cccddd""],""allowSameWith"":{""a"":[""b"",""c"",""d""],""b"":[""c"",""d""],""c"":[""d""]},""coefficient"":{""type"":""constant"",""value"":1}}"
+rule-0027	split	楚河汉界	Split	按行或列分半，前半只含0–4，后半只含5–9。	Split by rows or columns: the first half uses 0-4 and the second uses 5-9.	100	split-halves	{}
+rule-0028	weak-core	外强中干	Weak Core	中心4×4的数字和小于外围20格的数字和。	The inner 4x4 sum is less than the outer border sum.	100	center-border-sum	"{""operator"":""lt""}"
+rule-0029	top-heavy	头重脚轻	Upside Down	上两行的数字和大于下四行的数字和。	The top two rows sum to more than the bottom four rows.	100	top-bottom-sum	{}
+rule-0030	gradient	渐变色		所有行共享同一单调方向，所有列共享同一单调方向，且相邻数字之差不超过2。	All rows share one monotonic direction, all columns share one monotonic direction, and adjacent values differ by at most 2.	100	monotonic-lines	"{""maxDifference"":2}"
+rule-0031	apple-skin	苹果皮	Apple Skin	中心4×4全为0，外围20格全不为0。	The inner 4x4 is all zero and the outer border contains no zero.	100	center-border-digits	{}
+rule-0032	seven-segment-symmetry	七段对称		以七段显示形式旋转180°后，棋盘内容与原来相同。	The seven-segment display grid is unchanged by a 180-degree rotation.	100	seven-segment-rotation	{}
+rule-0033	island-survival	孤岛求生		上下左右相邻的数字均不相同。	No orthogonally adjacent cells contain the same digit.	100	no-adjacent-equal	{}
+rule-0034	not-1-but-2	一不做二不休	Not 1 But 2	棋盘包含2但不包含1。	The grid contains 2 but not 1.	100	digit-constraints	"{""requiredDigits"":[2],""forbiddenDigits"":[1]}"
+rule-0035	less-than-100	不足百	Less Than 100	所有数字之和小于100。	The sum of all digits is less than 100.	100	sum-compare	"{""operator"":""lt"",""value"":100}"
+rule-0037	tone-harmony	音韵和谐	Harmony	所有数字的普通话读音声调相同。	Every digit has the same tone in Mandarin.	100	uniform-mandarin-tone	{}
+rule-0038	binary	二进制/成都	Binary/San Francisco	棋盘只包含0和1，且两者都出现。	The grid contains only 0 and 1, and both occur.	100	digit-constraints	"{""requiredDigits"":[0,1],""forbiddenDigits"":[2,3,4,5,6,7,8,9]}"
+rule-0039	zero-curl-board	零旋度盘面	Zero Curl Board	每个2×2区域的两条对角线之和相等。	The two diagonal sums are equal in every 2x2 subgrid.	100	zero-curl	{}
+rule-0040	cake	蛋糕	The Cake	包含符合蛋糕合成表数字分配的3×3区域。	Contains a 3x3 area matching the cake recipe pattern.	100	pattern-matcher	"{""pattern"":[""mmm"",""ses"",""www""],""multiple"":true,""allowOverlap"":false,""coefficient"":{""type"":""match-count""}}"
+rule-0041	reverse-cake	糕蛋	ekaC ehT	包含一个蛋糕模板区域，并有另一区域与它上下对称。	Contains a cake-pattern area and another area vertically mirrored from it.	100	cake-pair	{}
+rule-0042	hell	地狱	hELL	每一行都包含连续横向序列7734。	Every row contains the horizontal sequence 7734.	100	horizontal-sequence	"{""sequence"":[7,7,3,4],""everyRow"":true}"
+rule-0043	champion	状元	The Champion	至少一行或一列达到博饼的状元级别。	At least one row or column qualifies as a Bo Bing champion.	100	bo-bing	"{""category"":""champion"",""scope"":""any-row-column""}"
+rule-0044	tetris	俄罗斯方块	Tetris	某个数字组成俄罗斯方块中的T、L、J、S或Z形。	One digit forms a Tetris T, L, J, S, or Z shape.	100	tetrominoes	"{""shapes"":""tljsz"",""coefficient"":""exponential""}"
+rule-0045	minesweeper	扫雷	MineSweeper	存在一个格子的数字等于其周围八格中0的数量。	A cell equals the number of zeros among its eight neighbors.	100	minesweeper	{}
+rule-0046	champion-golden-flower	状元插金花	The Champion with Golden Flower	至少一行或一列恰有四个4和两个1。	At least one row or column contains exactly four 4s and two 1s.	100	bo-bing	"{""category"":""golden-flower"",""scope"":""any-row-column""}"
+rule-0047	crosshair	有框不打？	Crosshair	存在一个格子，其上下左右四格数字相等。	A cell has four equal orthogonal neighbors.	100	pattern-matcher	"{""pattern"":["" & "",""&#&"","" & ""],""multiple"":true,""coefficient"":{""type"":""match-count""}}"
+rule-0048	mahjong	麻将	Mahjong	数字1–9各出现恰好4次。	Each digit from 1 through 9 occurs exactly four times.	100	digit-counts	"{""counts"":{""1"":4,""2"":4,""3"":4,""4"":4,""5"":4,""6"":4,""7"":4,""8"":4,""9"":4}}"
+rule-0049	mojang	附魔金苹果	Mojang	包含符合附魔金苹果合成表的3×3区域。	Contains a 3x3 area matching the enchanted golden apple recipe.	200	pattern-matcher	"{""pattern"":[""###"",""#*#"",""###""],""coefficient"":{""type"":""constant"",""value"":1}}"
+rule-0050	nether-portal	下界传送门	Nether Portal	包含宽4–6格、高5–6格的方框，边框数字不小于7，内部数字不大于2。	Contains a 4-6 by 5-6 frame with border digits at least 7 and interior digits at most 2.	100	nether-portal	{}
+rule-0051	end-portal	末地传送门	End Portal	包含符合末地传送门格式的5×5区域。	Contains a 5x5 area matching the End Portal pattern.	100	pattern-matcher	"{""pattern"":["" FFF "",""FPPPF"",""FPPPF"",""FPPPF"","" FFF ""],""coefficient"":{""type"":""match-count""}}"
+rule-0052	narrow-field	窄场地	Narrow Field	不同数字能构成俄罗斯方块T、I、L、J、O、S、Z并消行。	Different digits form Tetris pieces that can clear a line.	100	narrow-field	{}
+rule-0053	creeper	苦力怕	Creeper	苦力怕脸区域的数字不小于7，区域外数字不大于2。	Digits in a Creeper face are at least 7 and digits outside are at most 2.	100	pattern-matcher	"{""pattern"":[""##..##"",""##..##"",""..##.."","".####."","".####."","".#..#.""],""symbolValues"":{""#"":[7,8,9],""."":[0,1,2]},""coefficient"":{""type"":""match-count""}}"
+rule-0054	maimai-dx	唉舞萌吃	maimai DX	紧贴四角的八个格子对应舞萌的1–8号键。	Eight cells beside the corners correspond to maimai DX keys 1 through 8.	100	pattern-matcher	"{""pattern"":["" 8  1 "",""7    2"",""      "",""      "",""6    3"","" 5  4 ""],""coefficient"":{""type"":""match-count""}}"
+rule-0055	pareto-principle	贫富差距	Pareto Principle	数值最大的不足20%格子的和不小于棋盘总和的80%。	The largest-valued fewer than 20 percent of cells sum to at least 80 percent of the total.	100	pareto	"{""cellPercent"":20,""sumPercent"":80}"
+rule-0056	seven-above-eight	七上八下		所有7都位于所有8的上方。	Every 7 is above every 8.	100	digit-above	"{""upper"":7,""lower"":8}"
+rule-0057	missing-three-four	丢三落四		棋盘没有3，且除最下方一行外没有4。	The grid contains no 3, and no 4 outside the bottom row.	100	restricted-digits	{}
+rule-0058	effective-compression	高效压缩	Effective Compression	按行优先拼接棋盘并进行游程编码，编码后的数值个数少于36。	Run-length encoding of the row-major grid uses fewer than 36 numeric values.	100	run-length-compression	"{""originalLength"":36}"
+rule-0059	one-two-much	说一不二	One, But Two Much	棋盘包含1但不包含2。	The grid contains 1 but not 2.	100	digit-constraints	"{""requiredDigits"":[1],""forbiddenDigits"":[2]}"
+rule-0060	ouroboros	衔尾蛇	Ouroboros	棋盘顺时针螺旋展开后的序列是回文。	The clockwise spiral traversal is a palindrome.	100	spiral-palindrome	{}
+rule-0061	alcohol	乙醇	Alcohol	以格内数字作为元素序号，包含乙醇结构式。	Treating digits as atomic numbers, the grid contains an ethanol structural formula.	100	pattern-matcher	"{""pattern"":["" 11  "",""16681"","" 11  ""],""multiple"":true,""coefficient"":{""type"":""match-count""}}"
+rule-0062	three-way-confrontation	三方对质		第1–2、3–4、5–6行分别拼成的三个12位数均为质数。	The three 12-digit numbers formed by row pairs 1-2, 3-4, and 5-6 are prime.	100	paired-row-primes	{}
+rule-0063	go	围棋	AlphaGo	存在由数字A组成的环，包围只含另一数字B的区域。	A ring of digit A surrounds an area containing only another digit B.	100	captured-stones	{}
+rule-0064	e-shape	E	E	存在一个所有格子数字相同的E形结构。	The grid contains an E-shaped structure made of one digit.	100	e-shape	"{""mirrored"":false}"
+rule-0065	no-prize	未中奖		所有行、列及主副对角线均处于博饼未中奖级别。	Every row, column, and main diagonal is a no-prize Bo Bing roll.	100	bo-bing	"{""category"":""no-prize"",""scope"":""all-lines""}"
+rule-0066	block-comment	块注释	Block Comment	某行包含18，且它下方的某行包含81。	A row contains 18 and a lower row contains 81.	100	block-comment	{}
+rule-0067	six-seventh	6/7	six seventh	至少一行是142857的循环排列之一。	At least one row is a cyclic permutation of 142857.	100	cyclic-row	{}
+rule-0068	all-loops	全是圈套		数字自身的圈与数字围成的圈总数超过36。	The total number of loops inside digits and enclosed by digits exceeds 36.	100	loop-count	"{""threshold"":36}"
+rule-0069	six-queen	六皇后	6-Queen	某个数字的全部位置构成六皇后问题的解。	All occurrences of one digit form a solution to the six-queens problem.	100	n-queens	"{""size"":6}"
+rule-0070	flower	小花	Flower	包含由同一数字组成的3×3十字形。	Contains a 3x3 cross made of one digit.	100	pattern-matcher	"{""pattern"":["" # "",""###"","" # ""],""coefficient"":{""type"":""constant"",""value"":1}}"
+rule-0071	next-round	套圈	Next Round	棋盘从外到内分成三个同值数字圈。	The grid consists of three uniform concentric rings.	100	pattern-matcher	"{""pattern"":[""aaaaaa"",""abbbba"",""abccba"",""abccba"",""abbbba"",""aaaaaa""],""coefficient"":{""type"":""match-count""}}"
+rule-0073	self-introduction	自我介绍	Self Introduction	每个相同数字的正交连通块面积等于该数字。	Every orthogonally connected same-digit region has an area equal to its digit.	100	self-describing-regions	{}
+rule-0074	reversed-e	Ǝ	Reversed E	存在一个所有格子数字相同的镜像E形结构。	The grid contains a mirrored E-shaped structure made of one digit.	100	e-shape	"{""mirrored"":true}"
