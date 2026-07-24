@@ -169,5 +169,57 @@
         "type": "match-count"
       }
     }
+  },
+  {
+    "id": "rule-008",
+    "label": "full-house",
+    "name": {
+      "zh": "十全十美",
+      "en": "Full House"
+    },
+    "description": {
+      "zh": "0–9每个数字都至少出现一次，一个都不少。",
+      "en": "Every digit from 0 to 9 shows up at least once — nobody left out."
+    },
+    "baseScore": 100,
+    "matcherKey": "missing-digit-count",
+    "params": {
+      "count": 0
+    }
+  },
+  {
+    "id": "rule-009",
+    "label": "loopy",
+    "name": {
+      "zh": "处处有圈",
+      "en": "Loopy"
+    },
+    "description": {
+      "zh": "把数字自身的孔洞（0、6、9各一个，8有两个）与数字围成的封闭区域加起来超过17个圈。",
+      "en": "The holes printed inside digits (0/6/9 count 1, 8 counts 2) plus the pockets they enclose add up to more than 17 loops."
+    },
+    "baseScore": 100,
+    "matcherKey": "loop-count",
+    "params": {
+      "threshold": 17
+    }
+  },
+  {
+    "id": "rule-010",
+    "label": "above-average",
+    "name": {
+      "zh": "力压平均",
+      "en": "Above Average"
+    },
+    "description": {
+      "zh": "全部36个数字之和超过平均值162。棋盘偏重。",
+      "en": "The 36 digits sum to more than the average of 162. A heavy board."
+    },
+    "baseScore": 100,
+    "matcherKey": "sum-compare",
+    "params": {
+      "operator": "gt",
+      "value": 162
+    }
   }
 ]
