@@ -43,5 +43,131 @@
         "value": 1
       }
     }
+  },
+  {
+    "id": "rule-003",
+    "label": "creeper-cousin",
+    "name": {
+      "zh": "苦力怕的表弟",
+      "en": "Creeper's Cousin"
+    },
+    "description": {
+      "zh": "整块棋盘是一张上下颠倒的苦力怕脸：脸部数字不小于7，其余不大于2。这天他有点头重脚轻。",
+      "en": "The whole board is an upside-down Creeper face — face digits at least 7, background at most 2. He's having a rough day."
+    },
+    "baseScore": 150,
+    "matcherKey": "pattern-matcher",
+    "params": {
+      "pattern": [
+        ".#..#.",
+        ".####.",
+        ".####.",
+        "..##..",
+        "##..##",
+        "##..##"
+      ],
+      "symbolValues": {
+        "#": [7, 8, 9],
+        ".": [0, 1, 2]
+      },
+      "coefficient": {
+        "type": "match-count"
+      }
+    }
+  },
+  {
+    "id": "rule-004",
+    "label": "diamond-rain",
+    "name": {
+      "zh": "钻石铺满地",
+      "en": "Diamonds Everywhere"
+    },
+    "description": {
+      "zh": "存在一个由同一数字组成的5×5菱形。挖矿人狂喜。",
+      "en": "A 5×5 rhombus made of a single repeated digit. Miner's dream."
+    },
+    "baseScore": 120,
+    "matcherKey": "pattern-matcher",
+    "params": {
+      "pattern": [
+        "  D  ",
+        " DDD ",
+        "DDDDD",
+        " DDD ",
+        "  D  "
+      ],
+      "multiple": true,
+      "coefficient": {
+        "type": "match-count"
+      }
+    }
+  },
+  {
+    "id": "rule-005",
+    "label": "steve-pickaxe",
+    "name": {
+      "zh": "史蒂夫的镐",
+      "en": "Steve's Pickaxe"
+    },
+    "description": {
+      "zh": "棋盘某处画着一把镐：镐头三格用同一数字，木柄用另一数字。",
+      "en": "Somewhere on the board sits a pickaxe — one digit for the head, a different digit for the stick."
+    },
+    "baseScore": 130,
+    "matcherKey": "pattern-matcher",
+    "params": {
+      "pattern": [
+        "HHH",
+        "H H",
+        " X ",
+        " X "
+      ],
+      "coefficient": {
+        "type": "match-count"
+      }
+    }
+  },
+  {
+    "id": "rule-006",
+    "label": "peak-tang",
+    "name": {
+      "zh": "唐门绝技",
+      "en": "Peak Tang"
+    },
+    "description": {
+      "zh": "整块棋盘只有2。二二二二，非常唐。",
+      "en": "The board is nothing but 2s. That's it. That's the rule. Very 唐."
+    },
+    "baseScore": 200,
+    "matcherKey": "digit-constraints",
+    "params": {
+      "requiredDigits": [2],
+      "forbiddenDigits": [0, 1, 3, 4, 5, 6, 7, 8, 9]
+    }
+  },
+  {
+    "id": "rule-007",
+    "label": "gg-88",
+    "name": {
+      "zh": "下播了",
+      "en": "GG, 88"
+    },
+    "description": {
+      "zh": "棋盘上出现由数字8组成的“88”（拜拜）。主播挥手下播，一次挥手得一分。",
+      "en": "An '88' (bye-bye) drawn from the digit 8 appears on the board. One point per wave."
+    },
+    "baseScore": 88,
+    "matcherKey": "pattern-matcher",
+    "params": {
+      "pattern": [
+        "8 8",
+        "8 8",
+        "8 8"
+      ],
+      "multiple": true,
+      "coefficient": {
+        "type": "match-count"
+      }
+    }
   }
 ]
